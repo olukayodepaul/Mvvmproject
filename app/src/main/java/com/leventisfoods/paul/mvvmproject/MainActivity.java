@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         noteViewModel.insert(register);
 
         String intd = "paul";
+        String i = "jffuf";
 
         recyclerView = findViewById(R.id.recycler_view);
         noteAdapers = new NoteAdapers(this);
