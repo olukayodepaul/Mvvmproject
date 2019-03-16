@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         Register register = new Register(id, "olukayode", "oviosun");
         noteViewModel.insert(register);
 
+        String intd = "paul";
+
         recyclerView = findViewById(R.id.recycler_view);
         noteAdapers = new NoteAdapers(this);
         recyclerView.setAdapter(noteAdapers);
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(@Nullable List<Register> registers) {
                 noteAdapers.SetNotes(registers);
+
             }
         });
     }
