@@ -25,7 +25,7 @@ public class NoteViewModel extends AndroidViewModel {
         return allRegsiter;
     }
 
-    public void insert(Register register){
+    public void insert(Register register) {
         new InsertAsyTask(noteDao).execute(register);
     }
 

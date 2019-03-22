@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         noteViewModel = ViewModelProviders.of(this).get(NoteViewModel.class);
@@ -33,20 +31,15 @@ public class MainActivity extends AppCompatActivity {
         Register register = new Register(id, "olukayode", "oviosun");
         noteViewModel.insert(register);
 
-        String intd = "paul";
-        String i = "jffuf";
-
         recyclerView = findViewById(R.id.recycler_view);
         noteAdapers = new NoteAdapers(this);
         recyclerView.setAdapter(noteAdapers);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
         noteViewModel.getAllReg().observe(this, new Observer<List<Register>>() {
             @Override
             public void onChanged(@Nullable List<Register> registers) {
                 noteAdapers.SetNotes(registers);
-
             }
         });
     }

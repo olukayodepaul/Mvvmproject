@@ -19,7 +19,7 @@ public class Register {
         this.lastname = lastname;
     }
 
-    @NonNull
+
     public String getId() {
         return id;
     }
